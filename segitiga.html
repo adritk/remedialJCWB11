@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="output"></div>
+        <input type="text" id="inputSegitiga" placeholder="masukan baris segitiga">
+        <button onclick="proses()">submit</button>
+        <script>
+            
+            function segitiga(){
+                var input = document.getElementById('inputSegitiga').value
+                document.getElementById('inputSegitiga').value = ""
+                var output = ""
+                var nomor = 0
+                for (var a=1; a<=input; a++){
+                    for (var b=a; b<=input; b++){
+                        output += "&nbsp&nbsp&nbsp"
+                    }for(var c=1; c<=a; c++){
+                        output += '&nbsp&nbsp&nbsp'+(nomor+1);
+                        nomor+=2
+                    }
+                    output += "<br>"
+                }
+                return output
+            }
+            function proses(){
+                document.getElementById('output').innerHTML=segitiga()
+            }
+            function segitigaPlus(){
+
+            }
+        </script>
+</body>
+</html>
